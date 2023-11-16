@@ -33,7 +33,7 @@ const BarraRutasPublic = () => {
       <nav>
         <div className='menu'>
         <picture >
-            <img src={logo} width={"80px"} />
+            <img className='logo' src={logo} width={"80px"} />
           </picture>
           <ul className='menu__listas'>
             <li className='menusecondary__lista'><Link to="/">Dashboard</Link></li>
