@@ -2,8 +2,8 @@ import React from 'react'
 
 const ListaDeProfesores = () => {
   return (
-    <div id="sis">
-      <h1>ListaDeProfesores</h1>
+    <div>
+      <h2 className='seccion__title'>ListaDeProfesores</h2>
       Lisat de profesores...
     </div>
   )

@@ -1,0 +1,144 @@
+@import './variables/variables.css';
+
+body{
+    background-color: var(--secondary-theme-color);
+    margin: 0;
+    font-family: century gothic;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px; 
+
+}
+
+.menu__listas{
+    display: flex;
+    gap: 1rem;
+}
+
+.menu__lista{
+    margin: 0;
+    background-color: var(--primary-higlight-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    transition:1s;
+    list-style: none;
+}
+
+.menu__lista__user{
+
+    background-color: var(--primary-invalid-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    transition:1s;
+    color: var(--primary-text-color) ;
+    list-style: none;
+}
+
+.menu__lista a{
+    text-decoration: none;
+    color: var(--tertiary-text-color);
+}
+
+
+.menu__lista:hover{
+    background-color: var(--primary-text-color);
+    
+}
+
+.menusecondary__lista{
+    color: var(--primary-text-color);
+    background-color: var(--secondary-highlight-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    transition:1s;
+    list-style: none;
+}
+
+.menusecondary__lista a{
+    text-decoration: none;
+    color: var(--tertiary-text-color);
+}
+
+.menusecondary__lista:hover{
+    background-color: var(--primary-text-color);
+    
+}
+
+@media (max-width: 380px) {
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu__listas{
+        padding: 0px;
+    }
+  }
+
+.container{
+    background-image: url(./../assets/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--padding-container);
+
+}
+
+.seccion{
+    padding: var(--padding-section);
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion__title{
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.form{
+    align-items: center;
+    text-align: center;
+}
+
+.form__input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.form__input__name{
+    color: var(--primary-text-color);
+
+}
+
+.form__input__text{
+    padding: 0.625rem;
+    border-radius: 1rem;
+}
+
+.form__button{
+    margin-top: 0.625rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    background-color: var(--primary-button-color);
+    font-family: century gothic;
+    transition: 1s;
+}
+
+.form__button:hover{
+    box-shadow: 0px 2px 10px 0px var(--primary-higlight-color);
+}
+
+
+.lista__text{
+    color: var(--primary-text-color);
+}

@@ -1,9 +1,8 @@
 import React from 'react'
 import { Routes, Route, Link, Outlet, Switch, Redirect } from 'react-router-dom';
-
+import logo from './../assets/foto.jpg';
 import { useAuth } from './AuthContext';
 import { getAuth, signOut } from 'firebase/auth';
-import "./BarraNavegacion.css";
 import { useNavigate } from 'react-router-dom';
 
 import Home from '../public/Home';
@@ -30,23 +29,23 @@ const BarraRutasPublic = () => {
   }
 
   return (
-    <div style={{ background: "greenyellow", }}>
+    <div>
       <nav>
-        <div id="login">
-          <ul>
-            <li><Link to="/nuevoregistro">Registrar</Link></li>
-            {user ? (         ////////  Para cerrar sesión   ///////////
-              <li><Link onClick={handleSignOut} > Cerrar sesión </Link> </li>
-            ) : (
-              <li> <Link to="/Iniciarsesion">Iniciar sesión</Link> </li>
-            )}
+        <div className='menu'>
+        <picture >
+            <img src={logo} width={"80px"} />
+          </picture>
+          <ul className='menu__listas'>
+            <li className='menusecondary__lista'><Link to="/">Dashboard</Link></li>
+            <li className='menusecondary__lista'><Link to="/home">Home</Link> </li>
           </ul>
-        </div>
-
-        <div id="menu">
-          <ul>
-            <li><Link to="/"> Dashboard</Link></li>
-            <li><Link to="/home">Home</Link> </li>
+          <ul className='menu__listas'>
+            <li className='menu__lista'><Link to="/nuevoregistro">Registrar</Link></li>
+            {user ? (         ////////  Para cerrar sesión   ///////////
+              <li className='menu__lista'><Link onClick={handleSignOut} > Cerrar sesión </Link> </li>
+            ) : (
+              <li className='menu__lista'> <Link to="/Iniciarsesion">Iniciar sesión</Link> </li>
+            )}
           </ul>
         </div>
       </nav>
