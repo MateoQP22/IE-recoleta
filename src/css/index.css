@@ -3,7 +3,7 @@
 body{
     background-color: var(--secondary-theme-color);
     margin: 0;
-    font-family: century gothic;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -130,7 +130,7 @@ body{
     padding: 0.625rem;
     border-radius: 0.625rem;
     background-color: var(--primary-button-color);
-    font-family: century gothic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 1s;
 }
 
