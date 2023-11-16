@@ -2,9 +2,9 @@ import React from 'react'
 
 const ListaDeAlumnos = () => {
   return (
-    <div id="sis">
-      <h1>ListaDeAlumnos</h1>
-      Lisat de ListaDeAlumnos...
+    <div>
+      <h2 className='seccion__title'>ListaDeAlumnos</h2>
+      Lista de Lista De Alumnos...
     </div>
   )
 }

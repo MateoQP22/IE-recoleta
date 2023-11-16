@@ -9,10 +9,10 @@ import { auth, db } from '../conexion/firebase';
 function RegisterForm() {
 
   const { register } = useAuth();             // Registra usuario
-  
+
   const [email, setEmail] = useState('');       // Variables para correo
   const [password, setPassword] = useState(''); // Variable para password
-  
+
   const navigate = useNavigate();               // Navegación
 
   const handleRegister = async (e) => {
@@ -29,19 +29,21 @@ function RegisterForm() {
   }
 
   return (
-    <div  id='public'>
-      <h2>Registro de Nuevo Usuario</h2>
-      <form onSubmit={handleRegister}>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label>Contraseña:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        <button type="submit">Registrarse</button>
-      </form>
+    <div className='container'>
+      <div className='seccion'>
+        <h2 className='seccion__title'>Registrate</h2>
+        <form className='form' onSubmit={handleRegister}>
+          <div className='form__input'>
+            <label className='form__input__name'>Email:</label>
+            <input className='form__input__text' type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div className='form__input'>
+            <label className='form__input__name'>Contraseña:</label>
+            <input className='form__input__text' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <button className='form__button' type="submit">Registrarse</button>
+        </form>
+      </div>
     </div>
   );
 }
